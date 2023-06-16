@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #000;
+    overflow-x: hidden;
+    height: 100%;
+
+}
+
+.full-section {
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    position: absolute;
+    font-size: 40em;
+    color: #30303041;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 10em;
+    z-index: 99;
+    color: #fff;
+}
+
+/* Rain Amination style */
+
+i {
+    position: fixed;
+    height: 250px;
+    background: linear-gradient(transparent, #fff);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: inline-block;
+    animation: animate 5s linear infinite;
+}
+
+i:nth-child(3n+1){
+
+    background: linear-gradient(transparent, #00f);
+
+}
+
+i:nth-child(3n+2){
+
+    background: linear-gradient(transparent, #0f0);
+    
+}
+
+i:nth-child(3n+3){
+
+    background: linear-gradient(transparent, #f00);
+    
+}
+
+@keyframes animate {
+    0%{
+        transform:  rotate(20deg) translateY(-200px);
+    }
+
+    100%{
+        transform: rotate(20deg) translateY(calc(100vh + 350px));
+    }
+
+
+
+}
